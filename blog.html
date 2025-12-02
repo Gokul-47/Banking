@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly – Banking Services Blog</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+            <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+            <span class="logo-text">Stackly</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-toggle" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+            <li class="dropdown">
+                <a class="dropdown-toggle">Home ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./home2.html">Home 2</a></li>
+                </ul>
+            </li>
+
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+
+            <li><a href="./login.html" class="nav-btn">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Banking Insights & Financial Blog</h1>
+        <p>Articles on digital banking, savings, loans, credit cards, investments & financial security</p>
+    </div>
+</section>
+
+<!-- Featured Post -->
+<section class="featured-post">
+    <div class="container">
+        <div class="featured-content">
+            <span class="post-tag">Featured</span>
+            <h2>The Rise of Digital Banking: Why Most Indians Prefer Online Banking in 2025</h2>
+            <p class="post-excerpt">Learn how UPI, mobile banking apps, instant transfers, and secure digital services are transforming the way customers manage finances.</p>
+            <div class="post-meta">
+                <span>By Nisha Verma</span>
+                <span>•</span>
+                <span>January 15, 2025</span>
+                <span>•</span>
+                <span>8 min read</span>
+            </div>
+            <a href="404.html" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Categories -->
+<section class="blog-categories">
+    <div class="container">
+        <h2 class="section-title">Categories</h2>
+        <div class="categories-grid">
+            <button class="category-btn active" onclick="filterBlog('all')">All Posts</button>
+            <button class="category-btn" onclick="filterBlog('development')">Digital Banking</button>
+            <button class="category-btn" onclick="filterBlog('design')">Loans & Credit</button>
+            <button class="category-btn" onclick="filterBlog('marketing')">Savings & FD</button>
+            <button class="category-btn" onclick="filterBlog('technology')">Financial Technology</button>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Grid -->
+<section class="blog-grid-section">
+    <div class="container">
+        <div class="blog-grid">
+
+            <!-- 1 -->
+            <article class="blog-card" data-category="development">
+                <img src="assets/Banner1.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Digital Banking</span>
+                    <h3>How Online Banking Enhances Everyday Transactions</h3>
+                    <p>Explore secure fund transfers, bill payments, smart dashboards, and card management tools.</p>
+                    <div class="post-meta">
+                        <span>Rahul Menon</span>
+                        <span>•</span>
+                        <span>Jan 12, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="blog-card" data-category="design">
+                <img src="assets/banner2.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Loans & Credit</span>
+                    <h3>Choosing the Right Loan: Home, Personal, or Education?</h3>
+                    <p>A detailed guide to interest rates, eligibility, EMIs, processing times, and documentation.</p>
+                    <div class="post-meta">
+                        <span>Priya Sharma</span>
+                        <span>•</span>
+                        <span>Jan 9, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="blog-card" data-category="marketing">
+                <img src="assets/banner3.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Savings & FD</span>
+                    <h3>How Fixed Deposits Provide Safe & Guaranteed Returns</h3>
+                    <p>Understand interest rates, maturity options, senior citizen benefits, and tax savings.</p>
+                    <div class="post-meta">
+                        <span>Arvind Rao</span>
+                        <span>•</span>
+                        <span>Jan 5, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="blog-card" data-category="technology">
+                <img src="assets/banner4.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Fintech</span>
+                    <h3>AI in Banking: Fraud Detection, Smart Alerts & Faster Services</h3>
+                    <p>AI is making banking safer, faster, and more personalised for customers.</p>
+                    <div class="post-meta">
+                        <span>Kunal Singh</span>
+                        <span>•</span>
+                        <span>Jan 3, 2025</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="blog-card" data-category="development">
+                <img src="assets/banner5.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Digital Banking</span>
+                    <h3>Why Small Businesses Prefer Digital Banking Solutions</h3>
+                    <p>Instant settlements, GST payments, payroll transfers, and expense tracking simplify business finance.</p>
+                    <div class="post-meta">
+                        <span>Neha Kapoor</span>
+                        <span>•</span>
+                        <span>Dec 29, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6 -->
+            <article class="blog-card" data-category="design">
+                <img src="assets/banner6.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Loans & Credit</span>
+                    <h3>Understanding Credit Score & How It Impacts Loan Approval</h3>
+                    <p>Learn how CIBIL score works, how to improve it, and why banks evaluate credit history.</p>
+                    <div class="post-meta">
+                        <span>Vikas Nair</span>
+                        <span>•</span>
+                        <span>Dec 26, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 7 -->
+            <article class="blog-card" data-category="marketing">
+                <img src="assets/banner7.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Savings & FD</span>
+                    <h3>Recurring Deposits vs SIP: Which Is Better for You?</h3>
+                    <p>Compare low-risk savings through RD with market-linked growth via SIP investments.</p>
+                    <div class="post-meta">
+                        <span>Anita Patel</span>
+                        <span>•</span>
+                        <span>Dec 21, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 8 -->
+            <article class="blog-card" data-category="technology">
+                <img src="assets/banner8.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Fintech</span>
+                    <h3>The Future of Virtual Banking in India</h3>
+                    <p>24/7 bank access, zero paperwork, instant onboarding, and AI-powered assistance.</p>
+                    <div class="post-meta">
+                        <span>Rohan Jain</span>
+                        <span>•</span>
+                        <span>Dec 20, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 9 -->
+            <article class="blog-card" data-category="development">
+                <img src="assets/banner9.webp" class="blog-image">
+                <div class="blog-content">
+                    <span class="category-label">Digital Banking</span>
+                    <h3>Why Mobile Banking Apps Are Becoming a Must-Have</h3>
+                    <p>Track expenses, check balances, manage cards, and pay bills—all in one tap.</p>
+                    <div class="post-meta">
+                        <span>Divya Singh</span>
+                        <span>•</span>
+                        <span>Dec 18, 2024</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Signup -->
+<section class="blog-newsletter">
+    <div class="container">
+        <h2>Subscribe for Banking Updates</h2>
+        <p>Get latest updates on savings, loans, credit cards, and digital banking services.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Popular Tags -->
+<section class="popular-tags">
+    <div class="container">
+        <h2 class="section-title">Popular Banking Topics</h2>
+        <div class="tags-cloud">
+            <span class="tag">Savings Account</span>
+            <span class="tag">Fixed Deposit</span>
+            <span class="tag">Credit Cards</span>
+            <span class="tag">Home Loans</span>
+            <span class="tag">Personal Loans</span>
+            <span class="tag">UPI Payments</span>
+            <span class="tag">Cyber Security</span>
+            <span class="tag">Net Banking</span>
+            <span class="tag">Insurance</span>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Comments -->
+<section class="recent-comments">
+    <div class="container">
+        <h2 class="section-title">Customer Feedback</h2>
+        <div class="comments-list">
+            <div class="comment-item">
+                <p class="comment-text">"Opening my savings account online was super fast and easy!"</p>
+                <p class="comment-author">- Arjun on Digital Banking</p>
+            </div>
+            <div class="comment-item">
+                <p class="comment-text">"The personal loan approval process was smooth and transparent."</p>
+                <p class="comment-author">- Sneha on Personal Loan</p>
+            </div>
+            <div class="comment-item">
+                <p class="comment-text">"The credit card rewards program is amazing. Great value!"</p>
+                <p class="comment-author">- Karan on Credit Cards</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Archive -->
+<section class="blog-archive">
+    <div class="container">
+        <h2 class="section-title">Archive</h2>
+        <div class="archive-grid">
+            <div class="archive-item"><h4>January 2025</h4><p>4 posts</p></div>
+            <div class="archive-item"><h4>December 2024</h4><p>7 posts</p></div>
+            <div class="archive-item"><h4>November 2024</h4><p>6 posts</p></div>
+            <div class="archive-item"><h4>October 2024</h4><p>5 posts</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Authors Section -->
+<section class="blog-authors">
+    <div class="container">
+        <h2 class="section-title">Our Banking Experts</h2>
+        <div class="authors-grid">
+            <div class="author-card">
+                <div class="author-photo1"></div>
+                <h3>Neeraj Gupta</h3>
+                <p>Digital Banking Specialist</p>
+            </div>
+            <div class="author-card">
+                <div class="author-photo2"></div>
+                <h3>Priya Sharma</h3>
+                <p>Loan & Finance Advisor</p>
+            </div>
+            <div class="author-card">
+                <div class="author-photo3"></div>
+                <h3>Aditi Nair</h3>
+                <p>Investment Consultant</p>
+            </div>
+            <div class="author-card">
+                <div class="author-photo4"></div>
+                <h3>Rohan Das</h3>
+                <p>Fintech & Security Analyst</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resources -->
+<section class="blog-resources">
+    <div class="container">
+        <h2 class="section-title">Banking Resources</h2>
+        <div class="resources-grid">
+            <div class="resource-card">
+                <h3>Account Opening Guide</h3>
+                <p>Learn how to open savings or current accounts easily online.</p>
+                <a href="404.html" class="resource-link">View</a>
+            </div>
+            <div class="resource-card">
+                <h3>Loan Calculator</h3>
+                <p>Calculate EMI, interest rate, and compare loan plans.</p>
+                <a href="404.html" class="resource-link">Calculate</a>
+            </div>
+            <div class="resource-card">
+                <h3>Credit Card Comparison</h3>
+                <p>Check benefits, cashback, rewards, and fees.</p>
+                <a href="404.html" class="resource-link">Compare</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- FOOTER (UNCHANGED) -->
+    <!-- No changes made below -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+    <div class="footer-logo">
+        <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+        <span class="logo-text">Stackly</span>
+    </div>
+    <p class="footer-desc">Delivering secure, fast and reliable banking services for every customer.</p>
+</div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="./index.html" class="dropdown-toggle">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./blog.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@stacklybank.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Address: 123 Avenue, Indiranagar, Bengaluru</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="./404.html">Facebook</a>
+                        <a href="./404.html">Twitter</a>
+                        <a href="./404.html">LinkedIn</a>
+                        <a href="./404.html">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stackly Bank. All rights reserved.</p>
+            </div>
+
+            <div class="map-modal" id="mapModal">
+                <div class="map-modal-content">
+                    <button class="map-modal-close" data-map-close aria-label="Close map"></button>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.826169413119!2d77.6298!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1a1e1e1e1e1f%3A0x1e1e1e1e1e1e1e1e!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v" 
+                        width="100%" height="400" style="border:0; border-radius: 1rem;" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

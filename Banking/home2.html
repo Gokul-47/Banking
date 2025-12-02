@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Bank</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+   <!-- Navigation (unchanged) -->
+   <nav class="navbar">
+    <div class="nav-container">
+        <a href="./index.html" class="logo">
+            <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+            <span class="logo-text">Stackly</span>
+        </a>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li class="dropdown">
+                <a class="dropdown-toggle">Home 2▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </li>
+
+            <li><a href="./login.html" class="nav-btn">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Smart Banking for a Secure Future</h1>
+            <p class="hero-subtitle">
+                Experience seamless digital banking, instant payments, secure savings, and effortless financial services.
+            </p>
+            <div class="hero-buttons">
+                <a href="./services.html" class="btn btn-primary">Explore Services</a>
+                <a href="./contact.html" class="btn btn-secondary">Open Account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Stackly Bank?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Instant Digital Services</h3>
+                    <p>Open accounts, apply for loans, and manage finances instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Smart Mobile Banking</h3>
+                    <p>Make payments, transfer funds, and track expenses securely.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Advanced Security</h3>
+                    <p>Your money is protected with multi-layer encryption & fraud detection.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Financial Growth Tools</h3>
+                    <p>Invest, save, and grow your wealth with ease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Our Banking Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Savings & Current Accounts</h3>
+                    <p>Easy account opening with attractive interest rates and digital access.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Loans</h3>
+                    <p>Home, personal, vehicle loans with fast approval and low interest.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Digital Payments</h3>
+                    <p>UPI, IMPS, NEFT, QR payments available 24×7 without charges.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Investment & Insurance</h3>
+                    <p>Mutual funds, fixed deposits, and insurance plans tailored for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 class="stat-number">1M+</h3>
+                    <p>Active Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">99.9%</h3>
+                    <p>Secure Transactions</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">500+</h3>
+                    <p>Branches & Partners</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">15+</h3>
+                    <p>Years of Trust</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">How Banking Works with Us</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Register</h3>
+                    <p>Create your digital banking account in minutes.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Verify</h3>
+                    <p>Complete secure KYC verification online.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Transact</h3>
+                    <p>Send money, pay bills, invest, and manage finances easily.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Grow</h3>
+                    <p>Use personalized financial insights to grow your wealth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Trusted by Customers</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Stackly Bank offers the fastest digital services. Account opening took just 3 minutes!"</p>
+                    <p class="testimonial-author">- Arjun Sharma</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Their loan approval was super quick and hassle-free."</p>
+                    <p class="testimonial-author">- Kavya Rao</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Highly secure and reliable banking experience."</p>
+                    <p class="testimonial-author">- Mohammed Irfan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">Technology That Powers Our Banking</h2>
+            <div class="tech-grid">
+                <div class="tech-item">AI Fraud Detection</div>
+                <div class="tech-item">24×7 UPI Infrastructure</div>
+                <div class="tech-item">Cloud-Based Banking</div>
+                <div class="tech-item">Real-Time Transaction Alerts</div>
+                <div class="tech-item">Digital KYC</div>
+                <div class="tech-item">Analytics Dashboard</div>
+                <div class="tech-item">Secure Payment Gateway</div>
+                <div class="tech-item">Smart Investment Tools</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="portfolio-preview">
+        <div class="container">
+            <h2 class="section-title">Customer Success Stories</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>Loan Approvals</h3>
+                    <p>Thousands of customers received easy home & personal loans.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Financial Planning</h3>
+                    <p>Smart tools helped users grow savings efficiently.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Digital Banking</h3>
+                    <p>Seamless online banking transformed customer experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries">
+        <div class="container">
+            <h2 class="section-title">Services We Offer</h2>
+            <div class="industries-grid">
+                <div class="industry-card">Retail Banking</div>
+                <div class="industry-card">Corporate Banking</div>
+                <div class="industry-card">Digital Payments</div>
+                <div class="industry-card">Insurance Services</div>
+                <div class="industry-card">Wealth Management</div>
+                <div class="industry-card">Investment Banking</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Begin Your Banking Journey Today</h2>
+            <p>Open your digital account and experience secure, fast, and modern banking.</p>
+            <a href="./contact.html" class="btn btn-large">Open Account</a>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">Trusted By Leading Financial Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-logo">FinSecure Group</div>
+                <div class="partner-logo">MoneyTrust Corp</div>
+                <div class="partner-logo">CapitalPlus Finance</div>
+                <div class="partner-logo">WealthBridge Advisors</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING (converted into banking plans) -->
+<section class="pricing-section" id="pricing">
+    <div class="container">
+        <h2 class="section-title">Banking Plans</h2>
+
+        <div class="pricing-grid">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <h3>Basic Savings</h3>
+                <p class="price">₹0<span>/month</span></p>
+                <ul class="features">
+                    <li>No Minimum Balance</li>
+                    <li>Free UPI & Online Payments</li>
+                    <li>Email & SMS Alerts</li>
+                    <li>Debit Card Included</li>
+                </ul>
+                <a href="404.html" class="pricing-btn">Open Account</a>
+            </div>
+
+            <!-- Standard Plan -->
+            <div class="pricing-card popular">
+                <div class="badge">Most Popular</div>
+                <h3>Premium Savings</h3>
+                <p class="price">₹199<span>/month</span></p>
+                <ul class="features">
+                    <li>Everything in Basic</li>
+                    <li>Higher Interest Rates</li>
+                    <li>Unlimited ATM Withdrawals</li>
+                    <li>Smart Expense Tracking</li>
+                </ul>
+                <a href="404.html" class="pricing-btn primary">Choose Plan</a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="pricing-card">
+                <h3>Elite Banking</h3>
+                <p class="price">₹499<span>/month</span></p>
+                <ul class="features">
+                    <li>Everything in Premium</li>
+                    <li>Priority Customer Support</li>
+                    <li>Personal Financial Advisor</li>
+                    <li>Exclusive Investment Benefits</li>
+                </ul>
+                <a href="404.html" class="pricing-btn">Upgrade</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer (unchanged) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Original footer kept unchanged -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+                        <span class="logo-text">Stackly Edu</span>
+                    </div>
+                    <p class="footer-desc">Empowering students through innovative digital learning solutions.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="./index.html" class="dropdown-toggle">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Courses</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@stacklyedu.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Address: 123 Learning Street, Bengaluru, Karnataka</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="./404.html">Facebook</a>
+                        <a href="./404.html">Twitter</a>
+                        <a href="./404.html">LinkedIn</a>
+                        <a href="./404.html">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stackly Edu. All rights reserved.</p>
+            </div>
+
+            <!-- Map Modal (unchanged) -->
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
