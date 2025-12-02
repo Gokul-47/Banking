@@ -2015,7 +2015,7 @@ section {
 .team-avatar1 {
     width: 120px;
     height: 120px;
-    background: url(assets/sharma.avif) no-repeat center center;
+    background: url(assets/sharma.webp) no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     display: flex;
@@ -2041,7 +2041,7 @@ section {
 .team-avatar3{
     width: 120px;
     height: 120px;
-    background: url(assets/priya.jpg) no-repeat center center;
+    background: url(assets/priya.webp) no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     display: flex;
@@ -2054,7 +2054,7 @@ section {
 .team-avatar4{
     width: 120px;
     height: 120px;
-    background: url(assets/sofiya.jpg) no-repeat center center;
+    background: url(assets/sofiya.webp) no-repeat center center;
     background-size: cover;
     border-radius: 50%;
     display: flex;
