@@ -6,24 +6,32 @@ function toggleMobileMenu() {
 
 
 document.addEventListener("click", (e) => {
-    const menu = document.querySelector(".nav-menu");
+    const toggle = e.target.closest(".dropdown-toggle");
 
-   
-    if (e.target.closest(".dropdown-toggle")) {
-        const dropdown = e.target.closest(".dropdown");
+    if (toggle) {
+        const dropdown = toggle.closest(".dropdown");
 
-        // Only toggle on mobile
-        if (window.innerWidth < 768) {
-            dropdown.classList.toggle("open-mobile");
+        // If dropdown already open → now go to homepage
+        if (dropdown.classList.contains("open-mobile")) {
+            window.location.href = toggle.getAttribute("href");
+            return;
         }
+
+        // First click = open dropdown only
+        e.preventDefault();
+        dropdown.classList.add("open-mobile");
         return;
     }
 
-   
-    document.querySelectorAll(".dropdown").forEach((d) => {
-        d.classList.remove("open-mobile");
-    });
+    // Close dropdown when clicking outside
+    if (!e.target.closest(".dropdown")) {
+        document.querySelectorAll(".dropdown").forEach(d =>
+            d.classList.remove("open-mobile")
+        );
+    }
 });
+
+
 
 // Newsletter Form Handler
 function handleNewsletter(event) {
