@@ -1852,6 +1852,15 @@ section {
     color: white;
 }
 
+.quickaction-btn {
+    padding: 1rem;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    
+}
 /* Projects Grid */
 .projects-grid {
     display: grid;
