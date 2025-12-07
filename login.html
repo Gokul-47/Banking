@@ -214,5 +214,34 @@
         </div>
     </footer>
     <script src="./script.js"></script>
+    <script>
+function handleLogin(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("login-email").value.trim();
+    const password = document.getElementById("login-password").value.trim();
+    const errorBox = document.getElementById("login-error");
+
+    // Clear previous error
+    errorBox.style.display = "none";
+    errorBox.innerText = "";
+
+    // Basic validation
+    if (email === "" || password === "" || !validateEmail(email)) {
+        errorBox.style.display = "block";
+        errorBox.innerText = "Invalid login details. Please try again.";
+        return;
+    }
+
+    // If everything is correct → redirect to 404.html
+    window.location.href = "404.html";
+}
+
+function validateEmail(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+}
+</script>
+
 </body>
 </html>
