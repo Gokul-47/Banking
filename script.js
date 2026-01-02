@@ -232,6 +232,57 @@ document.addEventListener('DOMContentLoaded', function() {
     elementsToAnimate.forEach(el => {
         observer.observe(el);
     });
+
+    // Reveal-on-scroll (opt-in)
+    // Elements should have class="reveal" and can add data-reveal-delay="150" (ms) or data-reveal="left|right|fade"
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-revealed'));
+    } else {
+        const revealObserver = new IntersectionObserver((entries, ro) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const delay = parseInt(el.getAttribute('data-reveal-delay') || '0', 10);
+                    if (delay) el.style.transitionDelay = `${delay}ms`;
+                    el.classList.add('is-revealed');
+                    ro.unobserve(el);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+
+        // Auto-apply advanced animations (staggered pop, clip reveal, CTA shimmer, float visuals)
+        (function applyAdvancedAnimations(){
+            // Staggered pop reveal for cards/list items
+            const staggerSel = '.feature-card, .service-item, .testimonial-card, .portfolio-item, .product-card, .tile, .project-card';
+            document.querySelectorAll(staggerSel).forEach((el, i) => {
+                if (!el.classList.contains('reveal')) {
+                    el.classList.add('reveal','pop','hover-raise');
+                    el.setAttribute('data-reveal-delay', String(80 * (i % 8)));
+                }
+            });
+
+            // Clip reveal for hero headings
+            document.querySelectorAll('.hero h1, .hero-copy h1, .hero-title').forEach((h, i) => {
+                if (!h.classList.contains('clip-reveal')) {
+                    h.classList.add('clip-reveal','reveal');
+                    h.setAttribute('data-reveal-delay', '30');
+                }
+            });
+
+            // CTA shimmer on primary buttons (subtle)
+            document.querySelectorAll('.btn-primary, .primary, .btn-primary-alt').forEach(btn => {
+                btn.classList.add('btn--shine');
+            });
+
+            // Floating on hero visuals
+            document.querySelectorAll('.hero-visual, .card-stack .card, .hero-visual .card').forEach(el => {
+                if (!el.classList.contains('animate-float')) el.classList.add('animate-float');
+            });
+        })();
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    }
     
     // Handle window resize for mobile menu
     window.addEventListener('resize', function() {
